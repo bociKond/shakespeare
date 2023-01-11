@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+html {
+  height: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+:root {
+  --bg: #fff5fa;
+  --nav: #693535;
+  --li-bg: #ffc3a1;
+  --li-bg-hov: #b78a70;
+  --ff: "Playfair Display", serif;
+}
+body {
+  background-color: var(--bg);
+  line-height: 1.4;
+  font-family: var(--ff);
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 20vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--nav);
+  overflow-x: hidden;
+  padding-top: 20px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+  transform: all 0.3s;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--nav);
+  display: block;
+  background-color: var(--li-bg);
+  margin: 1rem 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav li:hover {
+  background-color: var(--li-bg-hov);
+  color: var(--bg);
+}
+
+.open-nav {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  border-radius: 50%;
+  z-index: 999;
+  border: none;
+}
+
+.icon {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  transition: var(--transition-e-o);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.ic {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0 4px var(--clr-10);
+}
+
+.icon:is(:hover, :focus-visible) {
+  transform: scale(1.4);
+}
+
+main {
+  font-size: 1.5rem;
+  padding: 0 5rem;
+}
+
+section {
+  border-bottom: 3px solid var(--nav);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: var(--nav);
+  text-align: center;
+  margin: 5rem auto;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ol {
+  padding-left: 5vw;
+  list-style: decimal-leading-zero;
+}
+ol li {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--nav);
+}
+ol li:last-child {
+  border-bottom: 0;
+}
+.btt {
+  border: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+#f-quote {
+  border-bottom: 0;
+  height: 100vh;
+}
+#p {
+  border-bottom: 3px solid var(--nav);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 2rem;
+  }
+  nav {
+    width: 100%;
+  }
+}
